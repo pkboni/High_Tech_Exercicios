@@ -1,9 +1,9 @@
 #---------------------------------------------------------------------------#
-##Execricio 1: Faça um Programa que mostre a mensagem "Alo mundo" na tela
+##Execricio 1: FaÃ§a um Programa que mostre a mensagem "Alo mundo" na tela
 #print("Alo mundo ")
 
 #---------------------------------------------------------------------------#
-##Execricio 2: Faça um Programa que peça um número e então mostre a mensagem O número informado foi [número]
+##Execricio 2: FaÃ§a um Programa que peÃ§a um nÃºmero e entÃ£o mostre a mensagem O nÃºmero informado foi [nÃºmero]
 #def new_func():
 #    numero = input("Informe um numero: ")
 #    return numero
@@ -12,16 +12,16 @@
 #print("O numero informado foi:", numero)
 
 #---------------------------------------------------------------------------#
-#Execricio 3: Faça um Programa que peça dois números e imprima a soma.
+#Execricio 3: FaÃ§a um Programa que peÃ§a dois nÃºmeros e imprima a soma.
 num1 = input("Informe o primeiro numero: ")
 num2 = input("Informe o segundo numero: ")
 def new_func1(num1, num2):
-    print("A soma dos numeros:", int(num1) + int(num2))
+    print("A soma dos numeros:", float(num1) + float(num2))
 
 new_func1(num1, num2)
 
 #---------------------------------------------------------------------------#
-#Execricio 4: Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+#Execricio 4: FaÃ§a um Programa que peÃ§a as 4 notas bimestrais e mostre a mÃ©dia.
 #nota1 = float(input("informe a nota do primeiro bimestre: "))
 #nota2 = float(input("informe a nota do segundoo bimestre: "))
 #nota3 = float(input("informe a nota do terceiro bimestre: "))
@@ -34,7 +34,7 @@ new_func1(num1, num2)
 #media(nota1, nota2, nota3, nota4)
 
 #---------------------------------------------------------------------------#
-#Execricio 5: Faça um Programa que converta metros para centímetros
+#Execricio 5: FaÃ§a um Programa que converta metros para centÃ­metros
 #xmetros = input("Informe a medida em metros: ")
 #def new_func(xmetros):
 #    print(f'{(float(xmetros)*100):.2f}', "centimetros")
@@ -43,7 +43,7 @@ new_func1(num1, num2)
 
 
 #---------------------------------------------------------------------------#
-#Execricio 6: Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
+#Execricio 6: FaÃ§a um Programa que peÃ§a o raio de um cÃ­rculo, calcule e mostre sua Ã¡rea.
 #import math
 #raio = float(input("Digite o raio do circulo: \n"))
 
@@ -54,7 +54,7 @@ new_func1(num1, num2)
 #area_circulo(raio)
 
 #---------------------------------------------------------------------------#
-#Execricio 7: Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+#Execricio 7: FaÃ§a um Programa que calcule a Ã¡rea de um quadrado, em seguida mostre o dobro desta Ã¡rea para o usuÃ¡rio.
 #lado = float(input("Digite a medida do lado do quadrado: \n"))
 #def area_quadrado(lado):
 #    print(f'A area do quadrado: {(lado**2):.2f}')
@@ -62,8 +62,8 @@ new_func1(num1, num2)
 #area_quadrado(lado)
 
 #---------------------------------------------------------------------------#
-#Execricio 8: Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. 
-#Calcule e mostre o total do seu salário no referido mês.
+#Execricio 8: FaÃ§a um Programa que pergunte quanto vocÃª ganha por hora e o nÃºmero de horas trabalhadas no mÃªs. 
+#Calcule e mostre o total do seu salÃ¡rio no referido mÃªs.
 #valor_hora = float(input("Quanto voce ganha por hora:\n"))
 #horas_mes = float(input("Quantas horas voce trabalha por mes:\n"))
 
@@ -74,7 +74,7 @@ new_func1(num1, num2)
 #salario_mes(valor_hora, horas_mes)
 
 #---------------------------------------------------------------------------#
-#Execricio 9: Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius. C = 5 * ((F-32) / 9)
+#Execricio 9: FaÃ§a um Programa que peÃ§a a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius. C = 5 * ((F-32) / 9)
 #graus_fahrenheit = float(input("Informe a temperatura em Fahrenheit:\n"))
 
 #def conversor(graus_fahrenheit):
@@ -86,7 +86,7 @@ new_func1(num1, num2)
 
 
 #---------------------------------------------------------------------------#
-##Execricio 10: Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Fahrenheit.
+##Execricio 10: FaÃ§a um Programa que peÃ§a a temperatura em graus Celsius, transforme e mostre em graus Fahrenheit.
 #gr_cel = float(input("Digite a temperatura e graus Celsius:\n"))
 
 #def converte(gr_cel):
