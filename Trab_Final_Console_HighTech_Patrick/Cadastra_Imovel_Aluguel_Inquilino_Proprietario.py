@@ -5,7 +5,7 @@ import psycopg2
 
 #-----------------FUNÇÃO PARA CONECTAR AO BANCO DE DADOS----------------------
 def conect_db():
-  conect = psycopg2.connect(user = 'postgres', password='12486W&a', host='localhost', port='5432', database='Trab_Final')
+  conect = psycopg2.connect(user = 'postgres', password='xxxxx', host='localhost', port='5432', database='Trab_Final')
   return conect
 
 #----------------------------FUNÇÃO PARA LIMPAR TELA--------------------------
