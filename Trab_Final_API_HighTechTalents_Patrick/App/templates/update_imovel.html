@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Cadastro de Imovel</h3>
+        <hr/>
+        
+        {%- for category, message in get_flashed_messages(with_categories = true) %}
+            <div class = "alert alert-danger">
+                {{ message }}
+            </div>
+        {%- endfor %}
+
+        <form action = "" method = "POST">
+            <input type="hidden" name="id" value="{{imovel.id}}" /><br>
+            <input type="number" name="_id_propriet" placeholder="ID Proprietario" value="{{imovel._id_propriet}}"/><br>
+            <input type="number" name ="_id_contrato" placeholder ="ID Contrato" value="{{imovel._id_contrato}}"/><br>
+            <input type="text" name ="ender_imovel" placeholder ="Endereco de Imovel" value="{{imovel.ender_imovel}}"/><br>
+            <input type="text" name ="cep" placeholder ="CEP" value="{{imovel.cep}}"/><br>
+            <input type="text" name ="descric" placeholder ="Casa/Kitnet/Apart/Terreno/Chacara/Galpao..." value="{{imovel.descric}}"/><br>
+            <input type="number" name ="area" placeholder ="Area do Imovel" value="{{imovel.area}}"/><br>
+            <input type="number" name="qtde_quartos" placeholder="Quantidade de Quartos" value="{{imovel.qtde_quartos}}"/><br>
+            <input type="number" name="num_matricula" placeholder="Numero de Matricula" value="{{imovel.num_matricula}}"/><br>
+            <input type="number" name="num_insc_munic" placeholder="Numero de Inscricao Municipal" value="{{imovel.num_insc_munic}}"/><br>
+            <input type="submit" value="Atualizar"/>
+        </form>
+        <h3>
+            <a href = "{{ url_for('show_all_imoveis') }}">Voltar para Lista</a>
+        </h3>
+    </body>
+</html>

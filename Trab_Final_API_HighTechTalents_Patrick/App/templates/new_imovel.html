@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Cadastro de Imovel</h3>
+      <hr/>
+      
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "_id_propriet">ID Proprietario</label><br>
+         <input type="number" name="_id_propriet" placeholder="ID Proprietario" /><br>
+         <label for = "_id_contrato">ID Contrato</label><br>
+         <input type="number" name ="_id_contrato" placeholder ="ID Contrato"/><br>
+         <label for = "ender_imovel">Endereco do Imovel</label><br>
+         <input type="text" name ="ender_imovel" placeholder ="Endereco do Imovel"/><br>
+         <label for = "cep">CEP</label><br>
+         <input type="text" name ="cep" placeholder ="CEP"/><br>
+         <label for = "descric">Descricao</label><br>
+         <input type="text" name ="descric" placeholder ="Descricao"/><br>
+         <label for = "area">Area do Imovel</label><br>
+         <input type="number" name ="area" placeholder ="Area do Imovel"/><br>
+         <label for="qtde_quartos">Quantidade de Quartos</label><br>
+         <input type="number" name="qtde_quartos" placeholder="Quantidade de Quartos"/><br>
+         <label for="num_matricula">Numero de Matricula</label><br>
+         <input type="number" name="num_matricula" placeholder="Numero de Matricula"/><br>
+         <label for="num_insc_munic">Numero de Inscricao Municipal</label><br>
+         <input type="number" name="num_insc_munic" placeholder="Numero de Inscricao Municipal"/><br>
+         <input type="submit" value="Inserir" />
+      </form>
+      <h3>
+         <a href = "{{ url_for('show_all_imoveis') }}">Voltar para Lista</a>
+      </h3>
+   </body>
+</html>

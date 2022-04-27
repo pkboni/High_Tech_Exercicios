@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head></head>
+    <body>
+        <hr>
+            <h3>
+                <a href = "{{ url_for('show_all_clientes') }}">Lista de Clientes</a><br>
+                <a href = "{{ url_for('show_all_proprietarios') }}">Lista de Proprietarios</a><br>
+                <a href = "{{ url_for('show_all_contratos') }}">Lista de Contratos</a><br>
+                <a href = "{{ url_for('show_all_corretores') }}">Lista de Corretores</a><br>
+                <a href = "{{ url_for('menu') }}">Menu Iniciar</a><br>
+            </h3>
+        </hr>
+        {%- for message in get_flashed_messages() %}
+            {{ message }}
+        {%- endfor %}
+		
+        <h3>Clientes (<a href = "{{ url_for('new_imovel') }}">Cadastrar Novo Imovel</a>)</h3>
+        <h2>Lista de Imoveis</h2>
+        <hr>
+            <table border="4">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ID_Proprietario</th>
+                        <th>ID_Contrato</th>
+                        <th>Endereço do Imovel</th>
+                        <th>CEP</th>
+                        <th>Descrição</th>
+                        <th>Area</th>
+                        <th>Quantidade de Quartos</th>
+                        <th>Numero de Matricula</th>
+                        <th>Numero de Inscricao Municipal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for imovel in imoveis %}
+                        <tr>
+                            <td><input type="hidden" name="id" enabled="false" value="{{ imoveis.id }}"></td> 
+                            <td>{{ imovel._id_propriet }}</td>
+                            <td>{{ imovel._id_contrato }}</td>
+                            <td>{{ imovel.ender_imovel }}</td>
+                            <td>{{ imovel.cep }}</td>
+                            <td>{{ imovel.descric }}</td>
+                            <td>{{ imovel.area }}</td>
+                            <td>{{ imovel.qtde_quartos }}</td>
+                            <td>{{ imovel.num_matricula }}</td>
+                            <td>{{ imovel.num_insc_munic }}</td>
+                            <th><a href="{{ url_for('update_imovel', id=imovel.id) }}">Editar</a></th>
+                            <td><a href="/excluir_imovel/{{ imovel.id }}">Excluir</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </hr>
+        <h3><a href="/">SAIR</a></h3>
+    </body>
+</html>

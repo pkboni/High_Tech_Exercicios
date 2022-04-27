@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head></head>
+    <body>
+        <hr>
+            <h3><a href = "{{ url_for('show_all_clientes') }}">Lista de Clientes</a><br>
+                <a href = "{{ url_for('show_all_proprietarios') }}">Lista de Proprietarios</a><br>
+                <a href = "{{ url_for('show_all_imoveis') }}">Lista de Imoveis</a><br>
+                <a href = "{{ url_for('show_all_corretores') }}">Lista de Corretores</a><br>
+                <a href = "{{ url_for('menu') }}">Menu Iniciar</a><br>
+            </h3>
+        </hr>
+        {%- for message in get_flashed_messages() %}
+            {{ message }}
+        {%- endfor %}
+		
+        <h3>Clientes (<a href = "{{ url_for('new_contrato') }}">Cadastrar Novo Contrato</a>)</h3>
+        <h2>Lista de Contratos</h2>
+        <hr>
+            <table border="4">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ID Cliente</th>
+                        <th>ID Proprietario</th>
+                        <th>ID Imovel</th>
+                        <th>Data Assinatura</th>
+                        <th>Valor do Aluguel</th>
+                        <th>Data Entrada no Imovel</th>
+                        <th>Duracao</th>
+                        <th>Termos</th>
+                        <th>Numero de Registro</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for contrato in contratos %}
+                        <tr>
+                            <td><input type="hidden" name="id" enabled="false" value="{{ contrato.id }}"></td> 
+                            <td>{{ contrato._id_cliente }}</td>
+                            <td>{{ contrato._id_propriet }}</td>
+                            <td>{{ contrato._id_imovel }}</td>
+                            <td>{{ contrato.data_assinat }}</td>
+                            <td>{{ contrato.valor_aluguel }}</td>
+                            <td>{{ contrato.data_ent_imovel }}</td>
+                            <td>{{ contrato.duracao }}</td>
+                            <td>{{ contrato.termos }}</td>
+                            <td>{{ contrato.num_regist }}</td>
+                            <th><a href="{{ url_for('update_contrato', id=contrato.id) }}">Editar</a></th>
+                            <td><a href="/excluir_contrato/{{ contrato.id }}">Excluir</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </hr>
+        <h3><a href="/">SAIR</a></h3>
+    </body>
+</html>
