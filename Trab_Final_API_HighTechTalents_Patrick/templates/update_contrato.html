@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Cadastro de Contrato</h3>
+        <hr/>
+        
+        {%- for category, message in get_flashed_messages(with_categories = true) %}
+            <div class = "alert alert-danger">
+                {{ message }}
+            </div>
+        {%- endfor %}
+
+        <form action = "" method = "POST">
+            <input type="hidden" name="id" value="{{contrato.id}}"/><br>
+            <input type="number" name="_id_cliente" placeholder="ID Cliente" value="{{contrato.nome}}"/><br>
+            <input type="number" name ="_id_propriet" placeholder ="ID Proprietario" value="{{contrato._id_propriet}}"/><br>
+            <input type="number" name ="_id_imovel" placeholder ="ID Imovel" value="{{contrato._id_imovel}}"/><br>
+            <input type="date" name ="data_assinat" placeholder ="Data da Assiantura" value="{{contrato.data_assinat}}"/><br>
+            <input type="number" step=0.01 name="valor_aluguel" placeholder="Valor do Aluguel" value="{{contrato.valor_aluguel}}"/>Step 0.01<br>
+            <input type="date" name ="data_ent_imovel" placeholder ="Data Entrada no Imovel" value="{{contrato.data_ent_imovel}}"/><br>
+            <input type="number" name="duracao" placeholder="Duracao (meses) inteiros" value="{{contrato.duracao}}"/><br>
+            <input type="text" name ="termos" placeholder ="Termos do contrato" value="{{contrato.termos}}"/><br>
+            <input type="number" name="num_regist" placeholder="Numero do Registro" value="{{contrato.num_regist}}"/><br>
+            <input type="submit" value="Atualizar" />
+        </form>
+        <h3>
+            <a href = "{{ url_for('show_all_contratos') }}">Voltar para Lista</a>
+        </h3>
+    </body>
+</html>
